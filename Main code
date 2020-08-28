@@ -1,0 +1,27 @@
+/*
+ * This code is the test code made by ESC crasci. Changes can be made and used. Sharing is not recommended.
+ * Change the NTSC to PAL if you use a PAL TV set. If you want to know what type yours is check the blog.
+ */
+#include <TVout.h>
+#include <fontALL.h>
+
+TVout TV;
+unsigned char x, y;
+
+void setup ( )
+{
+  
+      Serial.begin(9600);
+    TV.begin(NTSC,120,96); //change NTSC to PAL here based on the TV
+  TV.select_font(font6x8);
+  TV.clear_screen ( );
+  TV.print("Test code by ESC crasci" );
+  TV.print ("Change this and make it your own!");  // Set the date to January 1st, 2014
+
+  
+}
+
+void loop ( )
+{
+
+}
